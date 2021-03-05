@@ -2,9 +2,7 @@
 name: UXCLOUD-PRD - PARA S3
 
 on:
- push:
-  branches:
-    - master
+ workflow_dispatch:
 
 jobs:
   build:

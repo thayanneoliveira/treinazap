@@ -49,7 +49,7 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: 645567579575.dkr.ecr.us-east-1.amazonaws.com/uxcloud
           IMAGE_TAG: ${{ github.sha }}
-                  run: |
+        run: |
           docker build -t uxcloud .
           docker tag uxcloud:latest $ECR_REPOSITORY:latest
           docker push $ECR_REPOSITORY:latest

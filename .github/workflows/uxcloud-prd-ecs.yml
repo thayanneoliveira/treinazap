@@ -55,5 +55,5 @@ jobs:
           docker push $ECR_REPOSITORY:latest
           aws ecs update-service --cluster praticasTi --service uxcloud --force-new-deployment --region us-east-1
           
-      #- name: CLEAR CASH
-       # run: AWS_ACCESS_KEY_ID=${ACCESS_KEY} AWS_SECRET_ACCESS_KEY=${SECRET_KEY} aws cloudfront create-invalidation --distribution-id E39GTYFF4JZ2NE --path '/*'
+      - name: CLEAR CASH
+        run: AWS_ACCESS_KEY_ID=${ACCESS_KEY} AWS_SECRET_ACCESS_KEY=${SECRET_KEY} aws cloudfront create-invalidation --distribution-id E39GTYFF4JZ2NE --path '/*'
